@@ -1,3 +1,7 @@
+#dragged
+{
+	z-index: 50 !important;
+}
 #editor
 {
 	flex-grow: 1;
@@ -79,8 +83,8 @@
 #editor .item > .hopper:first-of-type
 {
 	height: 0.5rem;
-	border-top: 0.5rem solid transparent !important;
-	margin-top: -0.5rem !important;
+	border-top: 0.3rem solid transparent !important;
+	margin-top: -0.3rem !important;
 
 	border-bottom: 1rem solid transparent;
 	margin-bottom: -1rem;

@@ -6,27 +6,20 @@ This code is the drag and drop system from the project.
 
 */
 
-function IdGenerator()
-{
-	this.lastId = -1;
-	this.getId = function() { return ++this.lastId; }
-}
-var idGenerator = new IdGenerator();
-
 /*     DRAGGED     */
 function dragStart(e)
 {
 	var item = e.target;
-	e.dataTransfer.setData("dragged", item.id);
+	item.id = "dragged";
 
-	item.className = "item draggedItem";
 	document.getElementById("editor").className = "dragging";
 	e.stopPropagation();
 }
 function dragEnd(e)
 {
-	var item = document.getElementById(e.dataTransfer.getData("dragged"));
-	if (item) item.className = "item";
+	var item = document.getElementById("dragged");
+	if (item) item.id = "";
+
 	document.getElementById("editor").className = "";
 	e.stopPropagation();
 }
@@ -65,7 +58,7 @@ function addItem(source, target)
 	//<div id="lel" class="item" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)">Testing</div>
 		//make element
 	var item = source.cloneNode(true);
-	item.id = idGenerator.getId().toString();
+	//item.id = idGenerator.getId().toString();
 
 	//<div class="hopper" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)"></div>
 		//make element
@@ -93,8 +86,9 @@ function drop(e)
 	e.preventDefault();
 	dragLeave(e);
 
-	var item = document.getElementById(e.dataTransfer.getData("dragged"));
-	if (item) item.className = "item";
+	var item = document.getElementById("dragged");
+	if (item) item.id = "";
+	
 	var target = e.target;
 
 	if (document.getElementById("editor").contains(item))
@@ -121,5 +115,6 @@ function drop(e)
 	{
 		addItem(item, target);
 	}
+
 	e.stopPropagation();
 }
