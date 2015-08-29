@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<link rel="stylesheet" type="text/css" href="editor.css">
+	<script type="text/javascript" src="editor.js"></script>
+</head>
 <body>
-<h2>Test</h2>
+	<div id="editor">
+		<div class="hopper" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" data-dragEnabled="true"></div>
+	</div>
+	<div id="tools">
+		<div id="lel" class="item" draggable="true" ondragover="dragOver(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)" style="background-color: #F00;">
+			<p>Testing</p>
+		</div>
+		<div id="yolo" class="item" draggable="true" ondragover="dragOver(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)" data-output="true" style="background-color: #FF0;">
+			<p>YOLO</p>
+		</div>
+	</div>
 </body>
 </html>

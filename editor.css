@@ -1,0 +1,97 @@
+#editor
+{
+	flex-grow: 1;
+
+	box-sizing: border-box;
+
+	font-size: 0; /* Avoids inline spaces */
+	height: 100%;
+	overflow: auto;
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+}
+
+.item
+{
+	position: relative;
+	box-sizing: border-box;
+
+	min-width: 10rem;
+	min-height: 2rem;
+	display: inline-block;
+	padding: 0.5rem;
+	overflow: hidden;
+	box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.3) inset;
+}
+.item > p
+{
+	display: inline-block;
+	height: 1rem;
+	font-size: 1rem;
+	white-space: nowrap;
+	margin: -0.3rem 0.5rem 0;
+}
+
+#editor .item
+{
+	border-radius: 0.6rem;
+}
+
+
+#editor .hopper
+{
+	position: relative;
+	display: block;
+    align-self: stretch;
+	height: 0;
+	margin: -1rem 0;
+	border-top: 1rem solid transparent;
+	border-bottom: 1rem solid transparent;
+	transition: height 0.15s;
+
+	z-index: -1;
+}
+#editor.dragging .hopper
+{
+	z-index: 10 !important;
+}
+#editor .hopper.onHover
+{
+	height: 1rem;
+}
+#editor > .hopper:first-child
+{
+	margin-top: -0.5rem;
+	border-top-width: 0.5rem;
+}
+#editor > .hopper:last-child
+{
+	margin-bottom: 0;
+	border-bottom: none;
+	height: 0;
+	flex-grow: 1;
+}
+#editor .item > .hopper:first-of-type
+{
+	height: 0.5rem;
+	border-top: 0.5rem solid transparent !important;
+	margin-top: -0.5rem !important;
+
+	border-bottom: 1rem solid transparent;
+	margin-bottom: -1rem;
+}
+#editor .item > .hopper:last-child
+{
+	height: 1.5rem;
+	border-bottom: none !important;
+	margin-bottom: 0.5rem !important;
+}
+#editor .item > .hopper.onHover:first-of-type
+{
+	height: 1.5rem !important;
+}

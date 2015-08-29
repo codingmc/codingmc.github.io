@@ -1,0 +1,56 @@
+*
+{
+	/* default cursor in every case. May be changed in some other cases */
+	cursor: default;
+
+	/* Avoid selection (usig drag so it's a big thing) */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	z-index: 0;
+}
+
+/* Exeptions to the select avoid */
+input, .allowSelect
+{
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+	font-family: Arial;
+	font-size: 16px;
+	color: black;
+
+	font-family: Arial;
+	font-size: 16px;
+}
+
+body
+{
+	display: flex;
+
+}
+
+#tools
+{
+	width: 20%;
+}
+.draggedItem
+{
+	z-index: 50 !important;
+}
