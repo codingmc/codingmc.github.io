@@ -8,13 +8,13 @@
 </head>
 <body>
 	<div id="editor">
-		<div class="hopper" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" data-dragEnabled></div>
+		<div class="hopper" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" data-dropEnabled></div>
 	</div>
 	<div id="tools">
 		<div class="item" draggable="true" ondragover="dragOver(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)" style="background-color: #F00;">
 			<p>Testing</p>
 		</div>
-		<div class="item" draggable="true" ondragover="dragOver(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)" data-output="true" style="background-color: #FF0;">
+		<div class="item" draggable="true" ondragover="dragOver(event)" ondragstart="dragStart(event)" ondragend="dragEnd(event)" style="background-color: #FF0;" data-output>
 			<p>YOLO</p>
 		</div>
 	</div>

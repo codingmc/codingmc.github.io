@@ -34,7 +34,7 @@ function allowDrop(e)
 function dragOver(e)
 {
 	e.preventDefault();
-	if (e.target.hasAttribute("data-dragEnabled"))
+	if (e.target.hasAttribute("data-dropEnabled"))
 	{
 		e.target.setAttribute("data-hover", "");
 	}
@@ -65,7 +65,7 @@ function addItem(source, target)
 		//make element
 	var hopper = document.createElement("div");
 	hopper.className = "hopper";
-	hopper.setAttribute("data-dragEnabled", "");
+	hopper.setAttribute("data-dropEnabled", "");
 
 		//set events
 	hopper.setAttribute("ondrop", "drop(event)");
