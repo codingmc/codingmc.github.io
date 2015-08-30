@@ -34,21 +34,22 @@ function allowDrop(e)
 function dragOver(e)
 {
 	e.preventDefault();
-	if (e.target.getAttribute("data-dragEnabled") == "true" && !e.target.getAttribute("data-oldClass"))
+	if (e.target.getAttribute("data-dragEnabled") == "true")
 	{
-		e.target.setAttribute("data-oldClass", e.target.className)
-		e.target.className += " onHover";
+		e.target.setAttribute("data-hover", "true");
 	}
 	e.stopPropagation();
 }
 function dragLeave(e)
 {
 	e.preventDefault();
-	if (e.target.getAttribute("data-oldClass"))
-	{
-		e.target.className = e.target.getAttribute("data-oldClass");
-		e.target.setAttribute("data-oldClass", "");
-	}
+	
+	var h = document.querySelector('#editor .hopper[data-adding="true"]');
+	if (h) h.removeAttribute("data-adding");
+
+	e.target.setAttribute("data-hover", "false");
+
+
 	e.stopPropagation();
 }
 
@@ -90,6 +91,7 @@ function drop(e)
 	if (item) item.id = "";
 	
 	var target = e.target;
+	target.setAttribute("data-adding", "true");
 
 	if (document.getElementById("editor").contains(item))
 	{

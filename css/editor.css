@@ -64,9 +64,13 @@
 {
 	z-index: 10 !important;
 }
-#editor .hopper.onHover
+#editor .hopper[data-hover="true"]
 {
 	height: 1rem;
+}
+#editor .hopper[data-adding="true"]
+{
+	transition: none !important;
 }
 #editor > .hopper:first-child
 {
@@ -89,13 +93,22 @@
 	border-bottom: 1rem solid transparent;
 	margin-bottom: -1rem;
 }
+#editor .item > .hopper[data-hover="true"]:first-of-type
+{
+	height: 1.5rem !important;
+}
 #editor .item > .hopper:last-child
 {
 	height: 1.5rem;
 	border-bottom: none !important;
 	margin-bottom: 0.5rem !important;
 }
-#editor .item > .hopper.onHover:first-of-type
+#editor .item > .hopper[data-hover="true"]:last-child
 {
-	height: 1.5rem !important;
+	height: 2.5rem !important;
+}
+#editor .item[data-output="true"] + .hopper
+{
+	margin-top: -0.5rem;
+	border-top: 0.5rem solid transparent;
 }
