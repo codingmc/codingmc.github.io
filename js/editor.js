@@ -12,7 +12,7 @@ function dragStart(e)
 	var item = e.target;
 	item.id = "dragged";
 
-	document.getElementById("editor").setAttribute("dragging", "");
+	document.getElementById("editor").setAttribute("data-dragging", "");
 	e.stopPropagation();
 }
 function dragEnd(e)
@@ -20,7 +20,7 @@ function dragEnd(e)
 	var item = document.getElementById("dragged");
 	if (item) item.id = "";
 
-	document.getElementById("editor").removeAttribute("dragging");
+	document.getElementById("editor").removeAttribute("data-dragging");
 	e.stopPropagation();
 }
 
