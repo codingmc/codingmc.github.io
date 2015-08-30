@@ -12,7 +12,7 @@ function dragStart(e)
 	var item = e.target;
 	item.id = "dragged";
 
-	document.getElementById("editor").className = "dragging";
+	document.getElementById("editor").setAttribute("dragging", "");
 	e.stopPropagation();
 }
 function dragEnd(e)
@@ -20,7 +20,7 @@ function dragEnd(e)
 	var item = document.getElementById("dragged");
 	if (item) item.id = "";
 
-	document.getElementById("editor").className = "";
+	document.getElementById("editor").removeAttribute("dragging");
 	e.stopPropagation();
 }
 
@@ -34,9 +34,9 @@ function allowDrop(e)
 function dragOver(e)
 {
 	e.preventDefault();
-	if (e.target.getAttribute("data-dragEnabled") == "true")
+	if (e.target.hasAttribute("data-dragEnabled"))
 	{
-		e.target.setAttribute("data-hover", "true");
+		e.target.setAttribute("data-hover", "");
 	}
 	e.stopPropagation();
 }
@@ -44,10 +44,10 @@ function dragLeave(e)
 {
 	e.preventDefault();
 	
-	var h = document.querySelector('#editor .hopper[data-adding="true"]');
+	var h = document.querySelector('#editor .hopper[data-adding]');
 	if (h) h.removeAttribute("data-adding");
 
-	e.target.setAttribute("data-hover", "false");
+	e.target.removeAttribute("data-hover");
 
 
 	e.stopPropagation();
@@ -65,14 +65,14 @@ function addItem(source, target)
 		//make element
 	var hopper = document.createElement("div");
 	hopper.className = "hopper";
-	hopper.setAttribute("data-dragEnabled", "true");
+	hopper.setAttribute("data-dragEnabled", "");
 
 		//set events
 	hopper.setAttribute("ondrop", "drop(event)");
 	hopper.setAttribute("ondragover", "dragOver(event)");
 	hopper.setAttribute("ondragleave", "dragLeave(event)");
 
-	if (source.getAttribute("data-output") == "true")
+	if (source.hasAttribute("data-output"))
 	{
 		item.appendChild(hopper.cloneNode(false));
 	}
@@ -91,7 +91,7 @@ function drop(e)
 	if (item) item.id = "";
 	
 	var target = e.target;
-	target.setAttribute("data-adding", "true");
+	target.setAttribute("data-adding", "");
 
 	if (document.getElementById("editor").contains(item))
 	{

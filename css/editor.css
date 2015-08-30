@@ -60,15 +60,15 @@
 
 	z-index: -1;
 }
-#editor.dragging .hopper
+#editor[dragging] .hopper
 {
 	z-index: 10 !important;
 }
-#editor .hopper[data-hover="true"]
+#editor .hopper[data-hover]
 {
 	height: 1rem;
 }
-#editor .hopper[data-adding="true"]
+#editor .hopper[data-adding]
 {
 	transition: none !important;
 }
@@ -93,7 +93,7 @@
 	border-bottom: 1rem solid transparent;
 	margin-bottom: -1rem;
 }
-#editor .item > .hopper[data-hover="true"]:first-of-type
+#editor .item > .hopper[data-hover]:first-of-type
 {
 	height: 1.5rem !important;
 }
@@ -103,11 +103,11 @@
 	border-bottom: none !important;
 	margin-bottom: 0.5rem !important;
 }
-#editor .item > .hopper[data-hover="true"]:last-child
+#editor .item > .hopper[data-hover]:last-child
 {
 	height: 2.5rem !important;
 }
-#editor .item[data-output="true"] + .hopper
+#editor .item[data-output] + .hopper
 {
 	margin-top: -0.5rem;
 	border-top: 0.5rem solid transparent;
