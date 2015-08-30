@@ -60,7 +60,7 @@
 
 	z-index: -1;
 }
-#editor[dragging] .hopper
+#editor[data-dragging] .hopper
 {
 	z-index: 10 !important;
 }
