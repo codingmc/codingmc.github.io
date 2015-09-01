@@ -1,5 +1,6 @@
 "use strict";
 
+var xhr = null;
 var xmlDoc = null;
 function olh(e)
 {
@@ -13,7 +14,7 @@ function olh(e)
 }
 function getItems(filename, element)
 {
-	var xhr = new XMLHttpRequest();
+	xhr = new XMLHttpRequest();
 	xhr.open("GET", "./data/" + filename, true);
 	xhr.onload = olh;
 	xhr.send();
