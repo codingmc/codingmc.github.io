@@ -6,7 +6,7 @@ function olh(e)
 {
 	if (xhr.readyState === 4) {
 		if (xhr.status === 200) {
-			console.log(xmlDoc = xhr.responseText);
+			console.log(xmlDoc = xhr.responseXML);
 		} else {
 			console.error(xhr.statusText);
 		}
