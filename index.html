@@ -5,8 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="./css/theme.css">
 	<link rel="stylesheet" type="text/css" href="./css/editor.css">
 	<script type="text/javascript" src="./js/editor.js"></script>
+	<script type="text/javascript" src="./js/data.js"></script>
 </head>
-<body>
+<body onload="getItems('datatest.xml')">
 	<div id="editor">
 		<div class="hopper" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" data-dropEnabled></div>
 	</div>

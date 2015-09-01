@@ -1,0 +1,55 @@
+<data>
+	<groups>
+		<g id="Command">
+			<!-- Tests -->
+			<item ref="testfor" output="5" />
+			<item ref="testforblock" output="5" />
+			<item ref="testforblocks" output="5" />
+
+			<!-- Scoreboards and variables -->
+			<item ref="scoreboard" output="3" />
+			<item ref="stats" output="3" />
+			<item ref="execute" output="-1" />
+
+			<!-- Player -->
+			<item ref="tell" output="0" />
+			<item ref="tellraw" output="0" />
+			<item ref="title" output="0" />
+			<item ref="give" output="1" />
+			<item ref="clear" output="1" />
+			<item ref="xp" output="1" />
+			<item ref="trigger" output="4" />
+			<item ref="spreadplayers" output="1" />
+			<item ref="replaceitem" output="2" />
+			<item ref="enchant" output="2" />
+			<item ref="gamemode" output="0" />
+			<item ref="spawnpoint" output="0" />
+
+			<!-- Entity and data handleing -->
+			<item ref="summon" output="2" />
+			<item ref="entitydata" ouput="1" />
+			<item ref="effect" output="0" />
+			<item ref="kill" output="1" />
+			<item ref="tp" output="1" />
+
+			<!-- Blocks -->
+			<item ref="setblock" output="3" />
+			<item ref="blockdata" output="1" />
+			<item ref="clone" output="0" />
+			<item ref="fill" output="0" />
+
+			
+			<!-- World modification -->
+			<item ref="particle" output="1" />
+			<item ref="playsound" output="2" />
+			<item ref="time" output="1" />
+			<item ref="toggledownfall" output="0" />
+			<item ref="gamerule" output="0" />
+			<item ref="setworldspawn" output="0" />
+			<item ref="defaultgamemode" output="0" />
+			<item ref="weather" output="0" />
+			<item ref="worldborder" output="0" />
+
+		</g>
+	</groups>
+</data>
