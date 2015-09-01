@@ -26,10 +26,9 @@
 	box-sizing: border-box;
 
 	min-width: 10rem;
-	min-height: 2rem;
 	display: inline-block;
 	padding: 0.5rem;
-	overflow: hidden;
+	overflow: visible;
 	box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.3) inset;
 }
 .item > p
@@ -111,4 +110,14 @@
 {
 	margin-top: -0.5rem;
 	border-top: 0.5rem solid transparent;
+}
+#editor .item[data-friendly]
+{
+	border-bottom-right-radius: 0.2rem !important;
+	border-bottom-left-radius: 0 !important;
+}
+#editor .item[data-friendly] + .hopper + .item
+{
+	border-top-right-radius: 0.2rem !important;
+	border-top-left-radius: 0 !important;
 }
