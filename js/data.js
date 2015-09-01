@@ -10,6 +10,12 @@ function setItems(xmlDoc, element)
 	{
 		var div = document.createElement("div");
 		div.className = "item";
+		
+		div.setAttribute("draggable", "true");
+		div.setAttribute("ondragover", "dragOver(event)");
+		div.setAttribute("ondragstart", "dragStart(event)");
+		div.setAttribute("ondragend", "dragEnd(event)");
+
 		div.setAttribute("style", "background-color: red;");
 		div.innerHTML = "<p>" + item.getAttribute("ref") + "</p>";
 
