@@ -1,4 +1,6 @@
-var xmlDoc;
+"use strict";
+
+var xmlDoc = null;
 function olh(e)
 {
 	if (xhr.readyState === 4) {
