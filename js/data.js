@@ -9,6 +9,8 @@ function setItems(xmlDoc, element)
 	while (item)
 	{
 		var div = document.createElement("div");
+		div.className = "item";
+		div.setAttribute("style", "background-color: red;");
 		div.innerHTML = "<p>" + item.getAttribute("ref") + "</p>";
 
 		var v = item.getAttribute("output");
