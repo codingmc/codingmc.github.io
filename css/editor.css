@@ -19,6 +19,10 @@
 	align-content: flex-start;
 	align-items: flex-start;
 }
+#editor > *
+{
+	flex: none;
+}
 
 .item
 {
@@ -81,7 +85,7 @@
 	margin-bottom: 0;
 	border-bottom: none;
 	height: 0;
-	flex-grow: 1;
+	flex-grow: 1 !important;
 }
 #editor .item > .hopper:first-of-type
 {
