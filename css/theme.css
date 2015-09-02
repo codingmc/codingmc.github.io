@@ -50,4 +50,6 @@ body
 {
 	width: 20%;
 	padding: 0.5rem;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
