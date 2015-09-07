@@ -43,9 +43,33 @@ html, body
 body
 {
 	display: flex;
-
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: stretch;
+}
+body div, body div div /* The different spacers that make the layout */
+{
+	box-sizing: border-box;
 }
 
+#top
+{
+	height: 4rem;
+	background-color: #999;
+	border-bottom: 0.1rem solid #333;
+}
+#bot
+{
+	display: flex;
+	flex-grow: 1;
+}
+#files
+{
+	width: 10%;
+	overflow: auto;
+}
 #tools
 {
 	width: 20%;

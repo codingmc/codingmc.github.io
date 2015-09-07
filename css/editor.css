@@ -6,10 +6,7 @@
 {
 	flex-grow: 1;
 
-	box-sizing: border-box;
-
 	font-size: 0; /* Avoids inline spaces */
-	height: 100%;
 	overflow: auto;
 	padding: 0.5rem;
 	display: flex;
