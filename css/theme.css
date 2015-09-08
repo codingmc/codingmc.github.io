@@ -49,17 +49,22 @@ body
 	align-content: flex-start;
 	align-items: stretch;
 }
-body div, body div div /* The different spacers that make the layout */
+body > div, body > div > div /* The different spacers that make the layout */
 {
 	box-sizing: border-box;
 }
 
 #top
 {
-	height: 4rem;
+	height: 3rem;
 	background-color: #999;
 	border-bottom: 0.1rem solid #333;
 }
+#top input[type=button]
+{
+
+}
+
 #bot
 {
 	display: flex;
@@ -67,8 +72,10 @@ body div, body div div /* The different spacers that make the layout */
 }
 #files
 {
-	width: 10%;
+	width: 15%;
 	overflow: auto;
+	background-color: #DDD;
+	border-right: 0.1rem solid #777;
 }
 #tools
 {
@@ -76,4 +83,6 @@ body div, body div div /* The different spacers that make the layout */
 	padding: 0.5rem;
 	overflow-x: hidden;
 	overflow-y: auto;
+	background-color: #EEE;
+	border-left: 0.1rem solid #777;
 }
