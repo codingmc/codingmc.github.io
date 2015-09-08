@@ -15,7 +15,7 @@
 }
 
 /* Exeptions to the select avoid */
-input, .allowSelect
+textarea, input[type="text"], .allowSelect
 {
 	-webkit-touch-callout: text;
 	-webkit-user-select: text;
@@ -73,7 +73,7 @@ body > div, body > div > div /* The different spacers that make the layout */
 {
 	margin-right: 0.375rem;
 }
-#top > input[type=button]
+#top > input[type="button"]
 {
 	height: 1.5rem;
     background: none;
