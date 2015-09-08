@@ -63,9 +63,11 @@ body > div, body > div > div /* The different spacers that make the layout */
 	height: 3rem;
 	background-color: #999;
 	border-bottom: 0.1rem solid #333;
-	padding: 0.75rem 0.375rem 0.75rem 0.75rem;
+	padding: 0.75rem 0.375rem 0.65rem 0.75rem; /* 0.75rem but the right have the 0.375 from the inside margin and the bottom has the 0.1rem of border */
 	display: flex;
 	flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden; /* In case that the horitzontal var appears it doesn't overflow vertically */
 }
 #top > *
 {
