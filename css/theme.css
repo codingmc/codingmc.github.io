@@ -49,6 +49,10 @@ body
 	align-content: flex-start;
 	align-items: stretch;
 }
+body > *
+{
+	flex: none;
+}
 body > div, body > div > div /* The different spacers that make the layout */
 {
 	box-sizing: border-box;
