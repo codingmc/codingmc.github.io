@@ -21,20 +21,17 @@
 {
 	flex: none;
 }
-#trash
+#trash /* Trash has icon class */
 {
 	position: absolute;
 	right: 0.5rem;
 	bottom: 0.5rem;
 	z-index: 11; /* Always on top of hoppers (z-index = 10) */
 
-    width: 3rem;
-    height: 3rem;
+	width: 3rem;
+	height: 3rem;
 
-	background: #5CC url(../images/garbage21.svg) no-repeat center;
-	background-size: 2rem;
-    border: 0.1rem solid #244;
-    border-radius: 0.2rem;
+	background-image: url(../images/garbage.svg);
 }
 
 .item
@@ -67,7 +64,7 @@
 {
 	position: relative;
 	display: block;
-    align-self: stretch;
+	align-self: stretch;
 	height: 0;
 	margin: -1rem 0 -1rem -0.5rem;
 	border-top: 1rem solid transparent;

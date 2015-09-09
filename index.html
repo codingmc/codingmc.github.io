@@ -21,9 +21,22 @@
 	</div>
 	<main>
 		<div id="files">
+			<div id="fTools">
+				<div class="spacer"></div>
+				<div class="icon" id="add" alt="Add"></div>
+				<div class="spacer"></div>
+				<div class="icon" id="del" alt="Remove"></div>
+				<div class="spacer"></div>
+			</div>
+			<details id="code" open>
+				<summary>Code</summary>
+			</details>
+			<details id="entities" open>
+				<summary>Entities</summary>
+			</details>
 		</div>
 		<div id="editor">
-			<div id="trash" alt="Delete" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" data-dropEnabled></div>
+			<div id="trash" class="icon" alt="Delete" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" data-dropEnabled></div>
 			<div class="hopper" ondrop="drop(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" data-dropEnabled></div>
 		</div>
 		<div id="tools">
