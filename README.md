@@ -8,7 +8,11 @@ It uses the different command blocks introduced in the snapshots for Minecraft 1
 
 Simple
 -------
-Make a new Commandor Entity sheet. Drag the blocks and double click them to edit its properties.
+Make a new Project and add a new Codding or Entity sheet. Drag the blocks and double click them to edit its properties.
+
+If you are making an Entity, multiple blocks represents that they are ridding each other (the top one is the top of the entity [the one you summon/spawn]).
+
+If you are making a Codding sheet, the flow goes from top to bottom and if is inside another block it means i is conditional to that (blocks that allow conditionals are bigger). 
 
 Web application
 ---------------
