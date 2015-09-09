@@ -82,6 +82,15 @@ body > div, body > div > div /* The different spacers that make the layout */
     border: 0.1rem solid #244;
     flex: none;
 }
+#top > input[type="button"]:hover
+{
+    background-color: #7DD;
+}
+#top > input[type="button"]:active
+{
+	background-color: #399;
+}
+
 #top > .spacer
 {
 	min-width: 0;
