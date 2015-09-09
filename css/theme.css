@@ -53,9 +53,27 @@ body > *
 {
 	flex: none;
 }
-body > div, body > div > div /* The different spacers that make the layout */
+body > *, body > * > div /* The different spacers that make the layout */
 {
 	box-sizing: border-box;
+}
+
+input[type="button"]
+{
+	height: 1.5rem;
+    background: none;
+    background-color: #5CC;
+    border-radius: 0.2rem;
+    border: 0.1rem solid #244;
+    flex: none;
+}
+input[type="button"]:hover
+{
+    background-color: #7DD;
+}
+input[type="button"]:active
+{
+	background-color: #399;
 }
 
 #top
@@ -73,23 +91,6 @@ body > div, body > div > div /* The different spacers that make the layout */
 {
 	margin-right: 0.375rem;
 }
-#top > input[type="button"]
-{
-	height: 1.5rem;
-    background: none;
-    background-color: #5CC;
-    border-radius: 0.2rem;
-    border: 0.1rem solid #244;
-    flex: none;
-}
-#top > input[type="button"]:hover
-{
-    background-color: #7DD;
-}
-#top > input[type="button"]:active
-{
-	background-color: #399;
-}
 
 #top > .spacer
 {
@@ -100,7 +101,7 @@ body > div, body > div > div /* The different spacers that make the layout */
 	flex-grow: 1;
 }
 
-#bot
+main
 {
 	display: flex;
 	flex-grow: 1;
