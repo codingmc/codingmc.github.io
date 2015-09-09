@@ -6,21 +6,24 @@ This code is the drag and drop system from the project.
 
 */
 
+const EDITOR = "editor";
+const DRAGGED = "dragged";
+
 /*     DRAGGED     */
 function dragStart(e)
 {
 	var item = e.target;
-	item.id = "dragged";
+	item.id = DRAGGED;
 
-	document.getElementById("editor").setAttribute("data-dragging", "");
+	document.getElementById(EDITOR).setAttribute("data-dragging", "");
 	e.stopPropagation();
 }
 function dragEnd(e)
 {
-	var item = document.getElementById("dragged");
+	var item = document.getElementById(DRAGGED);
 	if (item) item.id = "";
 
-	document.getElementById("editor").removeAttribute("data-dragging");
+	document.getElementById(EDITOR).removeAttribute("data-dragging");
 	e.stopPropagation();
 }
 
@@ -87,13 +90,13 @@ function drop(e)
 	e.preventDefault();
 	dragLeave(e);
 
-	var item = document.getElementById("dragged");
+	var item = document.getElementById(DRAGGED);
 	if (item) item.id = "";
 	
 	var target = e.target;
 	target.setAttribute("data-adding", "");
 
-	if (document.getElementById("editor").contains(item))
+	if (document.getElementById(EDITOR).contains(item))
 	{
 		if (target.previousSibling !== item && target.nextSibling !== item)
 		{
