@@ -8,7 +8,7 @@
 
 	font-size: 0; /* Avoids inline spaces */
 	overflow: auto;
-	padding: 0.5rem;
+	padding: 0.5rem 0 0 0.5rem;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -69,7 +69,7 @@
 	display: block;
     align-self: stretch;
 	height: 0;
-	margin: -1rem 0;
+	margin: -1rem 0 -1rem -0.5rem;
 	border-top: 1rem solid transparent;
 	border-bottom: 1rem solid transparent;
 	transition: height 0.15s;
