@@ -15,10 +15,26 @@
 	justify-content: flex-start;
 	align-content: flex-start;
 	align-items: flex-start;
+	position: relative;
 }
 #editor > *
 {
 	flex: none;
+}
+#trash
+{
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0.5rem;
+	z-index: 11; /* Always on top of hoppers (z-index = 10) */
+
+    width: 3rem;
+    height: 3rem;
+
+	background: #5CC url(../images/garbage21.svg) no-repeat center;
+	background-size: 2rem;
+    border: 0.1rem solid #244;
+    border-radius: 0.2rem;
 }
 
 .item

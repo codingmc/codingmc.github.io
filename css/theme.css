@@ -123,3 +123,14 @@ body > div, body > div > div /* The different spacers that make the layout */
 {
 	flex: none;
 }
+
+
+/* Popups */
+#popups > div
+{
+	display: none;
+}
+#popups > div > .content
+{
+
+}
