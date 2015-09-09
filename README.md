@@ -1,11 +1,11 @@
 Coding Minecraft (Alpha)
 ========================
-Use command blocks.
+Use command blocks
 -------------------
 Make a few functionalities with command blocks and edit mobs has always been difficult. This project trys to simplify all the prosses to allow all the map makers make more awesome maps faster.
 It uses the different command blocks introduced in the snapshots for Minecraft 1.9 and uses a few tricks to allow big conditional blocks (and subconditional ones).
 
-Simple.
+Simple
 -------
 Make a new Commandor Entity sheet. Drag the blocks and double click them to edit its properties.
 
